@@ -1,0 +1,4046 @@
+{
+  "version": "2.0",
+  "source_document": "project-karma-chitragupt-v2.docx",
+  "escalation_ladder": {
+    "1": "AWARENESS — First time: Educational content. No deduction.",
+    "2": "GENTLE NUDGE — Second time: Community impact data shown. No deduction.",
+    "3": "SOFT CONSEQUENCE — Third time: Points deducted with remediation path.",
+    "4": "COMMUNITY FLAG — Repeated pattern: Elected community moderators involved.",
+    "5": "AUTHORITY ROUTING — Severe/criminal: Auto-routed to police/government with evidence."
+  },
+  "categories": [
+    {
+      "id": "ENV",
+      "name": "Environment & Green Cover",
+      "description": "Trees, Plants, Gardens, Urban Greening",
+      "positive": [
+        {
+          "id": "ENV-P01",
+          "action": "Plant a tree (sapling)",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Gemma 4 photo verification of planted sapling with geotag. Species identification. Ongoing tracking as tree grows.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "ENV-P02",
+          "action": "Tree survival check-in (monthly)",
+          "points": 15,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Return to same geotag, photograph tree growth. AI compares growth over time."
+          }
+        },
+        {
+          "id": "ENV-P03",
+          "action": "Maintain a home garden",
+          "points": 30,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Monthly photo of maintained garden. AI verifies plant health and diversity."
+          }
+        },
+        {
+          "id": "ENV-P04",
+          "action": "Install a terrace/balcony garden",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Before/after photos verified by AI. Ongoing monthly bonus for maintenance.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "ENV-P05",
+          "action": "Grow vegetables at home",
+          "points": 25,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of edible plants. Bonus when harvest is shared with neighbors."
+          }
+        },
+        {
+          "id": "ENV-P06",
+          "action": "Compost kitchen waste",
+          "points": 20,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of composting setup. AI verifies active composting vs abandoned bin."
+          }
+        },
+        {
+          "id": "ENV-P07",
+          "action": "Participate in tree plantation drive",
+          "points": 35,
+          "frequency": "per_event",
+          "verification": {
+            "method": "geotag_group_photo",
+            "details": "Event check-in + group photo verification. Organizer gets 2x points."
+          }
+        },
+        {
+          "id": "ENV-P08",
+          "action": "Adopt a public tree/park area",
+          "points": 40,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Registered adoption of a specific tree/area. Monthly maintenance photo proof."
+          }
+        },
+        {
+          "id": "ENV-P09",
+          "action": "Create a seed bomb / seed ball",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of seed bombs created. Bonus if follow-up shows germination."
+          }
+        },
+        {
+          "id": "ENV-P10",
+          "action": "Report illegal tree cutting",
+          "points": 30,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo + AI verification of fresh cut. Auto-routes to forest department.",
+            "authority": "forest_department"
+          }
+        },
+        {
+          "id": "ENV-P11",
+          "action": "Water a public/street tree",
+          "points": 5,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Quick photo verification.",
+            "cap": "Daily cap of 10 trees to prevent gaming."
+          }
+        },
+        {
+          "id": "ENV-P12",
+          "action": "Nurture a medicinal herb garden",
+          "points": 35,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "AI identifies medicinal plants (tulsi, neem, aloe vera). Educational content unlocked."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "ENV-N01",
+          "action": "Verified tree cutting without permission",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "forest_department",
+            "details": "Community report + multiple witness verification. Appeals process available."
+          }
+        },
+        {
+          "id": "ENV-N02",
+          "action": "Abandoning adopted green space",
+          "points": -50,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "No check-in for 60+ days on adopted area. Warning at 30 days."
+          }
+        },
+        {
+          "id": "ENV-N03",
+          "action": "False tree planting claim",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "AI detects stock photo, duplicate submission, or photoshopped evidence."
+          }
+        },
+        {
+          "id": "ENV-N04",
+          "action": "Burning garden/agricultural waste",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report with photo evidence. Air quality impact shown."
+          }
+        },
+        {
+          "id": "ENV-N05",
+          "action": "Using banned pesticides in garden",
+          "points": -60,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report or AI detection of chemical containers in garden photos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "WST",
+      "name": "Waste Management & Sanitation",
+      "description": "Garbage, Recycling, Cleanliness, Public Hygiene",
+      "positive": [
+        {
+          "id": "WST-P01",
+          "action": "Segregate home waste (wet/dry/hazardous)",
+          "points": 15,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Monthly photo of segregated bins. AI verifies proper categorization."
+          }
+        },
+        {
+          "id": "WST-P02",
+          "action": "Clean a public area (beach/park/street)",
+          "points": 40,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_before_after",
+            "details": "Before/after geotagged photos. AI estimates area cleaned and waste volume."
+          }
+        },
+        {
+          "id": "WST-P03",
+          "action": "Organize a community cleanup drive",
+          "points": 80,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event creation + participant verification + before/after. Organizer bonus."
+          }
+        },
+        {
+          "id": "WST-P04",
+          "action": "Report garbage dumping hotspot",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo. Auto-clustered with nearby reports for municipal action.",
+            "authority": "municipality"
+          }
+        },
+        {
+          "id": "WST-P05",
+          "action": "Recycle e-waste properly",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Photo of e-waste at authorized recycling center. Receipt scan verification."
+          }
+        },
+        {
+          "id": "WST-P06",
+          "action": "Set up a community recycling point",
+          "points": 60,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Verified setup with ongoing monthly maintenance check-ins.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "WST-P07",
+          "action": "Use cloth bags (refuse plastic)",
+          "points": 5,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo at shop showing cloth bag usage.",
+            "cap": "Weekly cap of 10."
+          }
+        },
+        {
+          "id": "WST-P08",
+          "action": "Donate usable items instead of discarding",
+          "points": 20,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Photo of donation to verified NGO/center. Receipt scan."
+          }
+        },
+        {
+          "id": "WST-P09",
+          "action": "Report open defecation spot",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag",
+            "details": "Geotagged report. Sensitive handling with no photos of people."
+          }
+        },
+        {
+          "id": "WST-P10",
+          "action": "Install a dustbin in public area",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of installed bin. Monthly check for maintenance.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "WST-P11",
+          "action": "Properly dispose of medical waste",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo at authorized medical waste collection point."
+          }
+        },
+        {
+          "id": "WST-P12",
+          "action": "Reduce single-use plastic (monthly audit)",
+          "points": 20,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "AI analyzes household waste photo for plastic reduction over time."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "WST-N01",
+          "action": "Littering in public space",
+          "points": -30,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report with photo. Person must be identifiable (behavior context)."
+          }
+        },
+        {
+          "id": "WST-N02",
+          "action": "Dumping construction debris illegally",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "municipality",
+            "details": "Geotagged evidence. License plate detection if vehicle visible."
+          }
+        },
+        {
+          "id": "WST-N03",
+          "action": "Burning garbage/plastic",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report. Air quality impact calculated and shown."
+          }
+        },
+        {
+          "id": "WST-N04",
+          "action": "Not segregating waste (repeated violations)",
+          "points": -15,
+          "frequency": "per_month",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Municipal worker reports after 3 warnings. Educational content triggered."
+          }
+        },
+        {
+          "id": "WST-N05",
+          "action": "Disposing hazardous waste in regular bins",
+          "points": -40,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Verified report from waste collector or community member."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ANM",
+      "name": "Animal Welfare",
+      "description": "Strays, Wildlife, Birds, Insects, Marine Life",
+      "positive": [
+        {
+          "id": "ANM-P01",
+          "action": "Feed stray animals (dogs/cats)",
+          "points": 10,
+          "frequency": "per_day",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification. AI identifies animals for population tracking.",
+            "cap": "Daily cap enforced."
+          }
+        },
+        {
+          "id": "ANM-P02",
+          "action": "Provide water bowl for strays/birds",
+          "points": 15,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of installed water bowl. Monthly maintenance check-in bonus.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "ANM-P03",
+          "action": "Install a bird house/feeder",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of installation. Bonus when birds are photographed using it."
+          }
+        },
+        {
+          "id": "ANM-P04",
+          "action": "Build/install an insect hotel",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "AI verifies structure is appropriate for local insect species."
+          }
+        },
+        {
+          "id": "ANM-P05",
+          "action": "Adopt a stray animal",
+          "points": 100,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Adoption certificate or vet registration. Ongoing monthly wellness check-ins (+15/month).",
+            "ongoing_tracking": true,
+            "ongoing_points": 15,
+            "ongoing_frequency": "per_month"
+          }
+        },
+        {
+          "id": "ANM-P06",
+          "action": "Get stray vaccinated (anti-rabies)",
+          "points": 50,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Vet receipt scan. Critical public health action."
+          }
+        },
+        {
+          "id": "ANM-P07",
+          "action": "Get stray sterilized (ABC program)",
+          "points": 60,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Vet receipt or municipal ABC program confirmation."
+          }
+        },
+        {
+          "id": "ANM-P08",
+          "action": "Rescue an injured animal",
+          "points": 40,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo documentation of rescue. Vet visit receipt for bonus."
+          }
+        },
+        {
+          "id": "ANM-P09",
+          "action": "Report animal cruelty",
+          "points": 30,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_evidence",
+            "details": "Geotagged evidence. Auto-routed to animal welfare board.",
+            "authority": "animal_welfare_board"
+          }
+        },
+        {
+          "id": "ANM-P10",
+          "action": "Create a butterfly garden",
+          "points": 35,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "AI identifies butterfly-friendly plants. Photo verification of setup."
+          }
+        },
+        {
+          "id": "ANM-P11",
+          "action": "Participate in beach/river cleanup (for marine life)",
+          "points": 45,
+          "frequency": "per_event",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Cleanup action + specific focus on marine debris documented."
+          }
+        },
+        {
+          "id": "ANM-P12",
+          "action": "Build a cow/cattle shelter contribution",
+          "points": 40,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Donation receipt to registered gaushala or shelter."
+          }
+        },
+        {
+          "id": "ANM-P13",
+          "action": "Report roadkill hotspot for speed bump request",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag",
+            "details": "Geotagged reports aggregated. Auto-petitions traffic dept after threshold.",
+            "authority": "traffic_department"
+          }
+        },
+        {
+          "id": "ANM-P14",
+          "action": "Maintain a community bird bath",
+          "points": 10,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Monthly photo of clean, filled bird bath."
+          }
+        },
+        {
+          "id": "ANM-P15",
+          "action": "Plant bee-friendly flowers",
+          "points": 20,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "AI identifies pollinator-friendly species in garden photo."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "ANM-N01",
+          "action": "Verified animal cruelty",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "police",
+            "details": "Multiple witness verification + photo/video evidence. Reported to police."
+          }
+        },
+        {
+          "id": "ANM-N02",
+          "action": "Poisoning strays",
+          "points": -300,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "police",
+            "details": "Most severe penalty. Criminal report auto-filed."
+          }
+        },
+        {
+          "id": "ANM-N03",
+          "action": "Abandoning a pet",
+          "points": -150,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Community verification. 30-day grace period if owner claims hardship."
+          }
+        },
+        {
+          "id": "ANM-N04",
+          "action": "Disrupting bird nesting sites",
+          "points": -60,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Seasonal awareness. AI flags nesting season warnings."
+          }
+        },
+        {
+          "id": "ANM-N05",
+          "action": "Illegal wildlife trade/possession",
+          "points": -250,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "wildlife_crime_control_bureau",
+            "details": "Reported to wildlife crime control bureau. Zero tolerance."
+          }
+        }
+      ]
+    },
+    {
+      "id": "WTR",
+      "name": "Water Conservation & Water Bodies",
+      "description": "Rivers, Lakes, Groundwater, Rainwater, Water Usage",
+      "positive": [
+        {
+          "id": "WTR-P01",
+          "action": "Install rainwater harvesting system",
+          "points": 80,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of setup. Municipal registration bonus."
+          }
+        },
+        {
+          "id": "WTR-P02",
+          "action": "Reduce monthly water consumption",
+          "points": 20,
+          "frequency": "per_month",
+          "verification": {
+            "method": "bill_scan",
+            "details": "Water bill scan showing month-over-month reduction."
+          }
+        },
+        {
+          "id": "WTR-P03",
+          "action": "Report water leakage in public infrastructure",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo. Auto-routed to water utility.",
+            "authority": "water_utility"
+          }
+        },
+        {
+          "id": "WTR-P04",
+          "action": "Clean a lake/pond/river bank",
+          "points": 50,
+          "frequency": "per_event",
+          "verification": {
+            "method": "geotag_before_after",
+            "details": "Before/after geotagged photos. Community event bonus."
+          }
+        },
+        {
+          "id": "WTR-P05",
+          "action": "Report industrial water pollution",
+          "points": 40,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_evidence",
+            "details": "Geotagged evidence. Auto-routed to pollution control board.",
+            "authority": "pollution_control_board"
+          }
+        },
+        {
+          "id": "WTR-P06",
+          "action": "Install water-efficient fixtures",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt/photo of low-flow fixtures installed."
+          }
+        },
+        {
+          "id": "WTR-P07",
+          "action": "Build a check dam or percolation pit",
+          "points": 100,
+          "frequency": "one_time",
+          "verification": {
+            "method": "engineering_verification",
+            "details": "Major infrastructure contribution. Engineering verification."
+          }
+        },
+        {
+          "id": "WTR-P08",
+          "action": "Adopt a water body for regular cleanup",
+          "points": 50,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Registered adoption with monthly maintenance photo proof."
+          }
+        },
+        {
+          "id": "WTR-P09",
+          "action": "Report water wastage (open taps, broken pipes)",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo. Quick verification."
+          }
+        },
+        {
+          "id": "WTR-P10",
+          "action": "Create awareness on water conservation",
+          "points": 30,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event/workshop photo with participant count."
+          }
+        },
+        {
+          "id": "WTR-P11",
+          "action": "Recharge a bore well / recharge pit",
+          "points": 60,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of recharge structure."
+          }
+        },
+        {
+          "id": "WTR-P12",
+          "action": "Use greywater for gardening",
+          "points": 20,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Setup photo + monthly verification of system in use."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "WTR-N01",
+          "action": "Dumping waste in water bodies",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "municipality_and_pollution_board",
+            "details": "Geotagged evidence. Municipal and pollution board notified."
+          }
+        },
+        {
+          "id": "WTR-N02",
+          "action": "Excessive water wastage",
+          "points": -20,
+          "frequency": "per_month",
+          "escalation": {
+            "level": 2,
+            "authority": null,
+            "details": "Community report threshold. Educational nudge first."
+          }
+        },
+        {
+          "id": "WTR-N03",
+          "action": "Illegal borewell drilling",
+          "points": -150,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "groundwater_authority",
+            "details": "Reported to groundwater authority."
+          }
+        },
+        {
+          "id": "WTR-N04",
+          "action": "Contaminating public water sources",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "health_department",
+            "details": "Severe offense. Health department notified."
+          }
+        },
+        {
+          "id": "WTR-N05",
+          "action": "Blocking natural water drainage",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "municipality",
+            "details": "Geotagged evidence of encroachment on drainage paths."
+          }
+        }
+      ]
+    },
+    {
+      "id": "AIR",
+      "name": "Air Quality & Pollution",
+      "description": "Emissions, Dust, Noise, Industrial Pollution",
+      "positive": [
+        {
+          "id": "AIR-P01",
+          "action": "Use public transport instead of private vehicle",
+          "points": 10,
+          "frequency": "per_trip",
+          "verification": {
+            "method": "transit_ticket_gps",
+            "details": "Transit ticket scan or GPS verification.",
+            "cap": "Monthly cap of 30."
+          }
+        },
+        {
+          "id": "AIR-P02",
+          "action": "Cycle/walk to work",
+          "points": 15,
+          "frequency": "per_trip",
+          "verification": {
+            "method": "gps",
+            "details": "GPS tracking for distance. Health bonus linked."
+          }
+        },
+        {
+          "id": "AIR-P03",
+          "action": "Get vehicle PUC regularly",
+          "points": 10,
+          "frequency": "per_6_months",
+          "verification": {
+            "method": "certificate",
+            "details": "PUC certificate scan."
+          }
+        },
+        {
+          "id": "AIR-P04",
+          "action": "Carpool with colleagues/neighbors",
+          "points": 10,
+          "frequency": "per_trip",
+          "verification": {
+            "method": "multi_user_gps",
+            "details": "Multiple users check-in at same vehicle GPS."
+          }
+        },
+        {
+          "id": "AIR-P05",
+          "action": "Report smoke-emitting vehicle",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo with license plate. Auto-routed to RTO.",
+            "authority": "rto"
+          }
+        },
+        {
+          "id": "AIR-P06",
+          "action": "Report illegal construction dust",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo showing uncovered construction site."
+          }
+        },
+        {
+          "id": "AIR-P07",
+          "action": "Switch to EV/electric vehicle",
+          "points": 100,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "One-time bonus. Registration certificate scan."
+          }
+        },
+        {
+          "id": "AIR-P08",
+          "action": "Report noise pollution (loudspeaker violations)",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "sensor",
+            "details": "Decibel reading from phone sensor + geotag + timestamp."
+          }
+        },
+        {
+          "id": "AIR-P09",
+          "action": "Install air purifying plants indoors",
+          "points": 15,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "AI identifies NASA-recommended air-purifying species."
+          }
+        },
+        {
+          "id": "AIR-P10",
+          "action": "Use eco-friendly Diwali (no firecrackers)",
+          "points": 30,
+          "frequency": "per_year",
+          "verification": {
+            "method": "self_declaration",
+            "details": "Self-declaration + community validation. Neighborhood bonus."
+          }
+        },
+        {
+          "id": "AIR-P11",
+          "action": "Report industrial emission violations",
+          "points": 40,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_evidence",
+            "details": "Geotagged evidence. Auto-routed to GPCB/CPCB.",
+            "authority": "gpcb_cpcb"
+          }
+        },
+        {
+          "id": "AIR-P12",
+          "action": "Reduce AC usage (temperature audit)",
+          "points": 10,
+          "frequency": "per_month",
+          "verification": {
+            "method": "smart_meter_self_report",
+            "details": "Smart meter data or self-reported with community validation."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "AIR-N01",
+          "action": "Burning firecrackers after permitted hours",
+          "points": -30,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report with timestamp + sound evidence."
+          }
+        },
+        {
+          "id": "AIR-N02",
+          "action": "Vehicle running without valid PUC",
+          "points": -20,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": "traffic_police",
+            "details": "Traffic camera integration or community report."
+          }
+        },
+        {
+          "id": "AIR-N03",
+          "action": "Running diesel generator in residential area",
+          "points": -40,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report with photo/video evidence."
+          }
+        },
+        {
+          "id": "AIR-N04",
+          "action": "Industrial emission without consent",
+          "points": -150,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "gpcb",
+            "details": "Report to GPCB with evidence."
+          }
+        },
+        {
+          "id": "AIR-N05",
+          "action": "Stubble/crop burning",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "agriculture_department",
+            "details": "Satellite + community verification. Alternative solutions offered."
+          }
+        }
+      ]
+    },
+    {
+      "id": "NRG",
+      "name": "Energy & Carbon",
+      "description": "Solar, Electricity, Carbon Footprint, Renewable Energy",
+      "positive": [
+        {
+          "id": "NRG-P01",
+          "action": "Install rooftop solar panels",
+          "points": 120,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Installation photo + meter reading. Ongoing generation tracking.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "NRG-P02",
+          "action": "Reduce monthly electricity consumption",
+          "points": 15,
+          "frequency": "per_month",
+          "verification": {
+            "method": "bill_scan",
+            "details": "Bill scan showing month-over-month reduction."
+          }
+        },
+        {
+          "id": "NRG-P03",
+          "action": "Switch to LED lighting completely",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo audit of home lighting. One-time bonus."
+          }
+        },
+        {
+          "id": "NRG-P04",
+          "action": "Use solar water heater",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Installation photo verification."
+          }
+        },
+        {
+          "id": "NRG-P05",
+          "action": "Charge EV from solar/renewable source",
+          "points": 10,
+          "frequency": "per_charge",
+          "verification": {
+            "method": "smart_meter",
+            "details": "Smart meter or solar inverter data verification."
+          }
+        },
+        {
+          "id": "NRG-P06",
+          "action": "Carbon offset purchase",
+          "points": "varies",
+          "frequency": "per_purchase",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt from verified carbon offset program."
+          }
+        },
+        {
+          "id": "NRG-P07",
+          "action": "Install energy-efficient appliances (5-star BEE)",
+          "points": 20,
+          "frequency": "per_appliance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of BEE rating label on new appliance."
+          }
+        },
+        {
+          "id": "NRG-P08",
+          "action": "Share excess solar energy with grid",
+          "points": 20,
+          "frequency": "per_month",
+          "verification": {
+            "method": "net_meter",
+            "details": "Net meter reading showing energy exported."
+          }
+        },
+        {
+          "id": "NRG-P09",
+          "action": "Conduct home energy audit",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_guided",
+            "details": "AI-guided photo walkthrough identifying efficiency opportunities."
+          }
+        },
+        {
+          "id": "NRG-P10",
+          "action": "Organize community solar cooperative",
+          "points": 80,
+          "frequency": "one_time",
+          "verification": {
+            "method": "registration",
+            "details": "Registered cooperative with verified members."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "NRG-N01",
+          "action": "Electricity theft",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "utility_company",
+            "details": "Utility company report integration."
+          }
+        },
+        {
+          "id": "NRG-N02",
+          "action": "Running energy-intensive equipment during peak hours repeatedly",
+          "points": -10,
+          "frequency": "per_month",
+          "escalation": {
+            "level": 2,
+            "authority": null,
+            "details": "Smart meter data. Educational nudge first."
+          }
+        },
+        {
+          "id": "NRG-N03",
+          "action": "Leaving lights/AC on in unoccupied public spaces",
+          "points": -10,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 2,
+            "authority": null,
+            "details": "Community report for commercial establishments."
+          }
+        }
+      ]
+    },
+    {
+      "id": "TRF",
+      "name": "Traffic & Road Safety",
+      "description": "Driving, Pedestrians, Infrastructure, Public Transport",
+      "positive": [
+        {
+          "id": "TRF-P01",
+          "action": "Report pothole with geotag",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "AI estimates severity from photo. Auto-routes to municipal road department.",
+            "authority": "municipality"
+          }
+        },
+        {
+          "id": "TRF-P02",
+          "action": "Report broken traffic signal",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo. Auto-routed to traffic police.",
+            "authority": "traffic_police"
+          }
+        },
+        {
+          "id": "TRF-P03",
+          "action": "Report missing/damaged road signs",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of missing signage."
+          }
+        },
+        {
+          "id": "TRF-P04",
+          "action": "Help elderly/disabled cross road",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Witness attestation or companion verification."
+          }
+        },
+        {
+          "id": "TRF-P05",
+          "action": "Report illegal parking blocking pedestrian path",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo."
+          }
+        },
+        {
+          "id": "TRF-P06",
+          "action": "Report waterlogged road",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo. AI estimates depth. Critical during monsoon."
+          }
+        },
+        {
+          "id": "TRF-P07",
+          "action": "Volunteer as traffic marshal at school zone",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "certificate",
+            "details": "School registration confirmation."
+          }
+        },
+        {
+          "id": "TRF-P08",
+          "action": "Report missing manhole cover",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Critical safety hazard. Emergency priority routing."
+          }
+        },
+        {
+          "id": "TRF-P09",
+          "action": "Report broken streetlight",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo with timestamp showing darkness."
+          }
+        },
+        {
+          "id": "TRF-P10",
+          "action": "Use helmet consistently (two-wheeler)",
+          "points": 5,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Opt-in photo verification or community attestation."
+          }
+        },
+        {
+          "id": "TRF-P11",
+          "action": "Report encroachment on footpath",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo series showing pattern."
+          }
+        },
+        {
+          "id": "TRF-P12",
+          "action": "Create accessible ramp for wheelchair/disabled",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Installation photo at shop/building entrance."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "TRF-N01",
+          "action": "Driving on wrong side (evidence-based)",
+          "points": -40,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": "traffic_police",
+            "details": "Dashcam or community video evidence."
+          }
+        },
+        {
+          "id": "TRF-N02",
+          "action": "Parking on footpath repeatedly",
+          "points": -20,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Multiple geotagged reports from different users."
+          }
+        },
+        {
+          "id": "TRF-N03",
+          "action": "Honking in no-honking zone",
+          "points": -10,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Decibel sensor + geofence data."
+          }
+        },
+        {
+          "id": "TRF-N04",
+          "action": "Road rage incident (verified)",
+          "points": -60,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Multiple witness reports + evidence."
+          }
+        },
+        {
+          "id": "TRF-N05",
+          "action": "Drunk driving report",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "traffic_police",
+            "details": "Community report. Forwarded to traffic police."
+          }
+        }
+      ]
+    },
+    {
+      "id": "HLT",
+      "name": "Public Health & Hygiene",
+      "description": "Disease Prevention, Sanitation, Fitness, Mental Health",
+      "positive": [
+        {
+          "id": "HLT-P01",
+          "action": "Get vaccinated (self/family)",
+          "points": 20,
+          "frequency": "per_vaccine",
+          "verification": {
+            "method": "certificate",
+            "details": "Vaccination certificate scan (CoWIN integration).",
+            "api": "CoWIN"
+          }
+        },
+        {
+          "id": "HLT-P02",
+          "action": "Donate blood",
+          "points": 50,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Blood bank receipt scan.",
+            "cooldown": "3 months"
+          }
+        },
+        {
+          "id": "HLT-P03",
+          "action": "Organize health camp in community",
+          "points": 70,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation with medical professional verification."
+          }
+        },
+        {
+          "id": "HLT-P04",
+          "action": "Report dengue mosquito breeding site",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo of stagnant water. Health department notified.",
+            "authority": "health_department"
+          }
+        },
+        {
+          "id": "HLT-P05",
+          "action": "Maintain clean surroundings (no stagnant water)",
+          "points": 10,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Monthly home perimeter photo. AI checks for breeding grounds."
+          }
+        },
+        {
+          "id": "HLT-P06",
+          "action": "First aid certification",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Certificate scan from recognized institution."
+          }
+        },
+        {
+          "id": "HLT-P07",
+          "action": "Organ donation pledge",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "NOTTO pledge certificate scan.",
+            "api": "NOTTO"
+          }
+        },
+        {
+          "id": "HLT-P08",
+          "action": "Actual organ donation (living: kidney/liver lobe)",
+          "points": 300,
+          "frequency": "one_time",
+          "verification": {
+            "method": "hospital_verification",
+            "details": "Hospital verification. Lifetime health check-in reminders via app.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "HLT-P09",
+          "action": "Posthumous organ donation (family follows through)",
+          "points": 500,
+          "frequency": "one_time",
+          "type": "legacy",
+          "verification": {
+            "method": "hospital_notto_verification",
+            "details": "Hospital + NOTTO verification. Permanent Life Giver badge. Karma transfers to inheritors.",
+            "badge": "Life Giver",
+            "karma_type": "legacy"
+          }
+        },
+        {
+          "id": "HLT-P10",
+          "action": "Eye donation pledge / cornea donation",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Eye bank registration verification."
+          }
+        },
+        {
+          "id": "HLT-P11",
+          "action": "Body donation pledge for medical research",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Medical college registration verification."
+          }
+        },
+        {
+          "id": "HLT-P12",
+          "action": "Mental health awareness workshop",
+          "points": 35,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Organize or attend. Event verification."
+          }
+        },
+        {
+          "id": "HLT-P13",
+          "action": "Set up community gym/yoga space",
+          "points": 60,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of open community fitness area."
+          }
+        },
+        {
+          "id": "HLT-P14",
+          "action": "Report food adulteration",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo evidence. Auto-routed to FSSAI.",
+            "authority": "fssai"
+          }
+        },
+        {
+          "id": "HLT-P15",
+          "action": "Promote menstrual hygiene (pad distribution)",
+          "points": 30,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation. NGO partnership verified."
+          }
+        },
+        {
+          "id": "HLT-P16",
+          "action": "De-addiction support volunteering",
+          "points": 35,
+          "frequency": "per_session",
+          "verification": {
+            "method": "certificate",
+            "details": "Organization verification of volunteer hours."
+          }
+        },
+        {
+          "id": "HLT-P17",
+          "action": "Plasma donation",
+          "points": 40,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Hospital receipt verification.",
+            "cooldown": "2 weeks"
+          }
+        },
+        {
+          "id": "HLT-P18",
+          "action": "Stem cell registry enrollment",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "DKMS/Marrow Donor Registry India registration verification.",
+            "api": "DKMS_MDRI"
+          }
+        },
+        {
+          "id": "HLT-P19",
+          "action": "Bone marrow donation (actual)",
+          "points": 250,
+          "frequency": "one_time",
+          "verification": {
+            "method": "hospital_verification",
+            "details": "Hospital verification. Lifetime health monitoring.",
+            "ongoing_tracking": true
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "HLT-N01",
+          "action": "Spitting in public (paan/gutka)",
+          "points": -15,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 2,
+            "authority": null,
+            "details": "Community report threshold. Educational content triggered."
+          }
+        },
+        {
+          "id": "HLT-N02",
+          "action": "Urinating in public",
+          "points": -20,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report. Toilet mapping feature offered."
+          }
+        },
+        {
+          "id": "HLT-N03",
+          "action": "Selling adulterated food (verified)",
+          "points": -150,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "fssai",
+            "details": "FSSAI report integration."
+          }
+        },
+        {
+          "id": "HLT-N04",
+          "action": "Not covering during contagious illness",
+          "points": -15,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 2,
+            "authority": null,
+            "details": "Community report. Gentle educational nudge."
+          }
+        },
+        {
+          "id": "HLT-N05",
+          "action": "Creating mosquito breeding conditions",
+          "points": -40,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": "municipal_health",
+            "details": "Municipal health worker report after repeated warnings."
+          }
+        }
+      ]
+    },
+    {
+      "id": "EDU",
+      "name": "Education & Literacy",
+      "description": "Teaching, Mentoring, Libraries, Digital Literacy",
+      "positive": [
+        {
+          "id": "EDU-P01",
+          "action": "Teach a child to read (volunteer tutoring)",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "attestation",
+            "details": "Partner organization or community verification."
+          }
+        },
+        {
+          "id": "EDU-P02",
+          "action": "Set up a community library / book exchange",
+          "points": 60,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of setup with book count."
+          }
+        },
+        {
+          "id": "EDU-P03",
+          "action": "Donate books to school/library",
+          "points": 15,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of donation with institution acknowledgment."
+          }
+        },
+        {
+          "id": "EDU-P04",
+          "action": "Teach digital literacy to senior citizens",
+          "points": 25,
+          "frequency": "per_session",
+          "verification": {
+            "method": "attestation",
+            "details": "Participant attestation or organization verification."
+          }
+        },
+        {
+          "id": "EDU-P05",
+          "action": "Mentor a student for competitive exams",
+          "points": 20,
+          "frequency": "per_session",
+          "verification": {
+            "method": "attestation",
+            "details": "Ongoing mentorship tracking."
+          }
+        },
+        {
+          "id": "EDU-P06",
+          "action": "Create educational content in local language",
+          "points": 30,
+          "frequency": "per_content",
+          "verification": {
+            "method": "ai_review",
+            "details": "Content quality check by AI."
+          }
+        },
+        {
+          "id": "EDU-P07",
+          "action": "Sponsor a child's education",
+          "points": 50,
+          "frequency": "per_month",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt from school/NGO."
+          }
+        },
+        {
+          "id": "EDU-P08",
+          "action": "Conduct career guidance workshop",
+          "points": 35,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation with participant feedback."
+          }
+        },
+        {
+          "id": "EDU-P09",
+          "action": "Teach vocational skills",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "attestation",
+            "details": "Participant attestation. Product/output photo as evidence."
+          }
+        },
+        {
+          "id": "EDU-P10",
+          "action": "Set up a free WiFi zone for students",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "technical_verification",
+            "details": "Technical verification of setup."
+          }
+        },
+        {
+          "id": "EDU-P11",
+          "action": "Run a homework help center",
+          "points": 25,
+          "frequency": "per_session",
+          "verification": {
+            "method": "geotag",
+            "details": "Location-based check-in with participant count."
+          }
+        },
+        {
+          "id": "EDU-P12",
+          "action": "Teach financial literacy",
+          "points": 25,
+          "frequency": "per_session",
+          "verification": {
+            "method": "event_verification",
+            "details": "Workshop documentation with participant count."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "EDU-N01",
+          "action": "Providing false educational credentials",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "institution",
+            "details": "Verification against institution records."
+          }
+        },
+        {
+          "id": "EDU-N02",
+          "action": "Promoting child labor instead of education",
+          "points": -150,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "child_welfare_committee",
+            "details": "Child welfare committee notified."
+          }
+        },
+        {
+          "id": "EDU-N03",
+          "action": "Cheating/plagiarism in community content",
+          "points": -30,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "AI content originality check."
+          }
+        }
+      ]
+    },
+    {
+      "id": "DEM",
+      "name": "Democracy & Governance",
+      "description": "Voting, Civic Participation, Transparency, RTI",
+      "positive": [
+        {
+          "id": "DEM-P01",
+          "action": "Vote in every election",
+          "points": 50,
+          "frequency": "per_election",
+          "verification": {
+            "method": "voter_ink_selfie",
+            "details": "Voter ink selfie or voter slip scan. Non-partisan.",
+            "api": "election_commission"
+          }
+        },
+        {
+          "id": "DEM-P02",
+          "action": "Attend gram sabha / ward meeting",
+          "points": 30,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag",
+            "details": "Location + time check-in verification."
+          }
+        },
+        {
+          "id": "DEM-P03",
+          "action": "File an RTI application",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "RTI receipt scan."
+          }
+        },
+        {
+          "id": "DEM-P04",
+          "action": "Participate in public consultation",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "event_checkin",
+            "details": "Event check-in verification."
+          }
+        },
+        {
+          "id": "DEM-P05",
+          "action": "Track government project progress",
+          "points": 15,
+          "frequency": "per_report",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo of ongoing government project."
+          }
+        },
+        {
+          "id": "DEM-P06",
+          "action": "Volunteer as election observer",
+          "points": 40,
+          "frequency": "per_election",
+          "verification": {
+            "method": "certificate",
+            "details": "Election commission registration verification.",
+            "api": "election_commission"
+          }
+        },
+        {
+          "id": "DEM-P07",
+          "action": "Attend budget consultation meeting",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "event_checkin",
+            "details": "Meeting attendance verification."
+          }
+        },
+        {
+          "id": "DEM-P08",
+          "action": "Create civic awareness content (non-partisan)",
+          "points": 20,
+          "frequency": "per_content",
+          "verification": {
+            "method": "ai_review",
+            "details": "AI checks for partisan bias."
+          }
+        },
+        {
+          "id": "DEM-P09",
+          "action": "Report corruption with evidence",
+          "points": 50,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "documented_evidence",
+            "details": "Documented evidence. Routed to anti-corruption bureau.",
+            "authority": "anti_corruption_bureau"
+          }
+        },
+        {
+          "id": "DEM-P10",
+          "action": "Participate in community decision-making poll",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "in_app",
+            "details": "In-app community poll participation."
+          }
+        },
+        {
+          "id": "DEM-P11",
+          "action": "Organize a citizen town hall",
+          "points": 60,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation with diverse participation."
+          }
+        },
+        {
+          "id": "DEM-P12",
+          "action": "Monitor public spending transparency",
+          "points": 30,
+          "frequency": "per_report",
+          "verification": {
+            "method": "documented_evidence",
+            "details": "Documented comparison of sanctioned vs actual work."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "DEM-N01",
+          "action": "Spreading electoral misinformation",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "AI fact-check + community report."
+          }
+        },
+        {
+          "id": "DEM-N02",
+          "action": "Vote buying / electoral bribery",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "election_commission",
+            "details": "Multiple witness + evidence. Election commission notified."
+          }
+        },
+        {
+          "id": "DEM-N03",
+          "action": "Vandalizing public property during protests",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "police",
+            "details": "Geotagged evidence."
+          }
+        },
+        {
+          "id": "DEM-N04",
+          "action": "Filing frivolous/harassing RTIs",
+          "points": -30,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Pattern detection of targeted harassment."
+          }
+        },
+        {
+          "id": "DEM-N05",
+          "action": "Obstructing public meetings",
+          "points": -40,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Event organizer report with evidence."
+          }
+        }
+      ]
+    },
+    {
+      "id": "SOC",
+      "name": "Community & Social Welfare",
+      "description": "Neighborhood, Elderly, Disabled, Underprivileged",
+      "positive": [
+        {
+          "id": "SOC-P01",
+          "action": "Help elderly neighbor with groceries/errands",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Recipient attestation."
+          }
+        },
+        {
+          "id": "SOC-P02",
+          "action": "Organize inclusive community celebration",
+          "points": 40,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation."
+          }
+        },
+        {
+          "id": "SOC-P03",
+          "action": "Volunteer at old age home / orphanage",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "certificate",
+            "details": "Institution verification."
+          }
+        },
+        {
+          "id": "SOC-P04",
+          "action": "Donate clothes/essentials to needy",
+          "points": 20,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "NGO receipt or distribution photo."
+          }
+        },
+        {
+          "id": "SOC-P05",
+          "action": "Set up community emergency fund",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "documentation",
+            "details": "Bank account documentation."
+          }
+        },
+        {
+          "id": "SOC-P06",
+          "action": "Mediate neighborhood dispute peacefully",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Both parties attestation."
+          }
+        },
+        {
+          "id": "SOC-P07",
+          "action": "Welcome and help new families",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "New resident attestation."
+          }
+        },
+        {
+          "id": "SOC-P08",
+          "action": "Organize inter-faith harmony event",
+          "points": 50,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation showing diverse participation."
+          }
+        },
+        {
+          "id": "SOC-P09",
+          "action": "Support person with disability in daily tasks",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Recipient attestation."
+          }
+        },
+        {
+          "id": "SOC-P10",
+          "action": "Run a community kitchen / langar",
+          "points": 40,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event photo with participant count."
+          }
+        },
+        {
+          "id": "SOC-P11",
+          "action": "Provide free professional services to underprivileged",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "attestation",
+            "details": "Legal aid, medical, accounting. Recipient attestation."
+          }
+        },
+        {
+          "id": "SOC-P12",
+          "action": "Organize women's safety workshop",
+          "points": 35,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation."
+          }
+        },
+        {
+          "id": "SOC-P13",
+          "action": "Create accessible infrastructure for disabled",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Ramp, tactile paths, braille signage."
+          }
+        },
+        {
+          "id": "SOC-P14",
+          "action": "Run a free coaching center",
+          "points": 25,
+          "frequency": "per_session",
+          "verification": {
+            "method": "attendance",
+            "details": "Attendance tracking."
+          }
+        },
+        {
+          "id": "SOC-P15",
+          "action": "Sponsor community sports event",
+          "points": 30,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation."
+          }
+        },
+        {
+          "id": "SOC-P16",
+          "action": "Help migrant worker with documentation/shelter",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Worker attestation or NGO verification."
+          }
+        },
+        {
+          "id": "SOC-P17",
+          "action": "Organize Library of Things (community lending)",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "documentation",
+            "details": "Setup documentation with inventory. Monthly activity bonus.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "SOC-P18",
+          "action": "Skill barter (teach one, learn one)",
+          "points": 20,
+          "frequency": "per_exchange",
+          "verification": {
+            "method": "attestation",
+            "details": "Both parties attestation of skill exchange."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "SOC-N01",
+          "action": "Discrimination based on caste/religion/gender",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Multiple witness reports."
+          }
+        },
+        {
+          "id": "SOC-N02",
+          "action": "Noise nuisance to neighbors (repeated)",
+          "points": -20,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Multiple complaints from different neighbors."
+          }
+        },
+        {
+          "id": "SOC-N03",
+          "action": "Blocking common areas / encroachment",
+          "points": -30,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community photo evidence."
+          }
+        },
+        {
+          "id": "SOC-N04",
+          "action": "Harassment of community members",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Multiple witness verification."
+          }
+        },
+        {
+          "id": "SOC-N05",
+          "action": "Domestic violence (reported by victim/neighbor)",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "women_helpline_181",
+            "details": "Routed to women helpline 181."
+          }
+        }
+      ]
+    },
+    {
+      "id": "DST",
+      "name": "Disaster Management & Resilience",
+      "description": "Floods, Earthquakes, Fire, Pandemic, Emergency Response",
+      "positive": [
+        {
+          "id": "DST-P01",
+          "action": "Complete disaster preparedness training",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Certificate from NDMA/SDMA."
+          }
+        },
+        {
+          "id": "DST-P02",
+          "action": "Maintain emergency kit at home",
+          "points": 15,
+          "frequency": "per_year",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Annual photo verification."
+          }
+        },
+        {
+          "id": "DST-P03",
+          "action": "Volunteer during natural disaster",
+          "points": 80,
+          "frequency": "per_event",
+          "verification": {
+            "method": "registration",
+            "details": "Volunteer registration with relief organization."
+          }
+        },
+        {
+          "id": "DST-P04",
+          "action": "Donate to verified disaster relief fund",
+          "points": "varies",
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt scan from PM/CM relief fund or verified NGO."
+          }
+        },
+        {
+          "id": "DST-P05",
+          "action": "Report flood/waterlogging in real-time",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo with water level estimation."
+          }
+        },
+        {
+          "id": "DST-P06",
+          "action": "Provide shelter to displaced persons",
+          "points": 60,
+          "frequency": "per_day",
+          "verification": {
+            "method": "attestation",
+            "details": "Recipient attestation."
+          }
+        },
+        {
+          "id": "DST-P07",
+          "action": "Maintain fire safety equipment",
+          "points": 20,
+          "frequency": "per_year",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Annual photo of working fire extinguisher."
+          }
+        },
+        {
+          "id": "DST-P08",
+          "action": "Learn and teach CPR / emergency first response",
+          "points": 35,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "certificate",
+            "details": "Certification or workshop participation."
+          }
+        },
+        {
+          "id": "DST-P09",
+          "action": "Create community emergency communication plan",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "documentation",
+            "details": "Documented plan shared with community."
+          }
+        },
+        {
+          "id": "DST-P10",
+          "action": "Report structural danger",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo. AI assesses severity."
+          }
+        },
+        {
+          "id": "DST-P11",
+          "action": "Map accessible shelter routes for disabled",
+          "points": 30,
+          "frequency": "per_route",
+          "verification": {
+            "method": "documentation",
+            "details": "Route documentation with accessibility features."
+          }
+        },
+        {
+          "id": "DST-P12",
+          "action": "Stockpile and distribute emergency supplies",
+          "points": 40,
+          "frequency": "per_event",
+          "verification": {
+            "method": "ai_photo",
+            "details": "During active disaster. Distribution photo."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "DST-N01",
+          "action": "Hoarding essential supplies during disaster",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Community reports during declared emergency."
+          }
+        },
+        {
+          "id": "DST-N02",
+          "action": "Price gouging during emergency",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "consumer_court",
+            "details": "Receipt evidence of inflated prices."
+          }
+        },
+        {
+          "id": "DST-N03",
+          "action": "Spreading disaster-related misinformation",
+          "points": -60,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "AI fact-check against official data."
+          }
+        },
+        {
+          "id": "DST-N04",
+          "action": "Blocking emergency vehicle access",
+          "points": -50,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "police",
+            "details": "Geotagged evidence."
+          }
+        },
+        {
+          "id": "DST-N05",
+          "action": "Looting during disaster",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "police",
+            "details": "Evidence-based. Police report filed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "HRT",
+      "name": "Heritage & Culture",
+      "description": "Historical Sites, Local Art, Languages, Traditional Knowledge",
+      "positive": [
+        {
+          "id": "HRT-P01",
+          "action": "Clean/maintain a heritage site",
+          "points": 40,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_before_after",
+            "details": "Before/after geotagged photos."
+          }
+        },
+        {
+          "id": "HRT-P02",
+          "action": "Document local oral history/folklore",
+          "points": 30,
+          "frequency": "per_content",
+          "verification": {
+            "method": "community_archive",
+            "details": "Audio/text recording on community archive."
+          }
+        },
+        {
+          "id": "HRT-P03",
+          "action": "Teach/preserve a dying local craft",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "event_verification",
+            "details": "Workshop documentation with output photos."
+          }
+        },
+        {
+          "id": "HRT-P04",
+          "action": "Organize local cultural event",
+          "points": 35,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation."
+          }
+        },
+        {
+          "id": "HRT-P05",
+          "action": "Report heritage site vandalism",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_evidence",
+            "details": "Geotagged evidence. ASI notified.",
+            "authority": "asi"
+          }
+        },
+        {
+          "id": "HRT-P06",
+          "action": "Create a local history walk/tour guide",
+          "points": 40,
+          "frequency": "per_content",
+          "verification": {
+            "method": "documentation",
+            "details": "Published route with verified info."
+          }
+        },
+        {
+          "id": "HRT-P07",
+          "action": "Document local recipes/food traditions",
+          "points": 15,
+          "frequency": "per_content",
+          "verification": {
+            "method": "community_archive",
+            "details": "Recipe with cultural context."
+          }
+        },
+        {
+          "id": "HRT-P08",
+          "action": "Support local artisan",
+          "points": 10,
+          "frequency": "per_purchase",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt from recognized artisan."
+          }
+        },
+        {
+          "id": "HRT-P09",
+          "action": "Restore a public mural / wall art",
+          "points": 35,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_before_after",
+            "details": "Community-approved. Before/after photos."
+          }
+        },
+        {
+          "id": "HRT-P10",
+          "action": "Translate public info into local language",
+          "points": 20,
+          "frequency": "per_content",
+          "verification": {
+            "method": "verified_translation",
+            "details": "Verified translation."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "HRT-N01",
+          "action": "Vandalizing heritage sites",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "asi",
+            "details": "ASI notified."
+          }
+        },
+        {
+          "id": "HRT-N02",
+          "action": "Illegal excavation or artifact theft",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "archaeological_authorities",
+            "details": "Archaeological authorities notified."
+          }
+        },
+        {
+          "id": "HRT-N03",
+          "action": "Misrepresenting cultural traditions for profit",
+          "points": -50,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report and expert review."
+          }
+        }
+      ]
+    },
+    {
+      "id": "AGR",
+      "name": "Agriculture & Food Security",
+      "description": "Farming, Food Waste, Nutrition, Local Food Systems",
+      "positive": [
+        {
+          "id": "AGR-P01",
+          "action": "Start organic farming / kitchen garden",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification. AI monitors.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "AGR-P02",
+          "action": "Reduce food waste (monthly audit)",
+          "points": 15,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of waste reduction practices."
+          }
+        },
+        {
+          "id": "AGR-P03",
+          "action": "Donate excess food to food bank",
+          "points": 20,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Food bank receipt."
+          }
+        },
+        {
+          "id": "AGR-P04",
+          "action": "Support local farmer (buy direct)",
+          "points": 10,
+          "frequency": "per_purchase",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Farmer market receipt."
+          }
+        },
+        {
+          "id": "AGR-P05",
+          "action": "Create a community seed bank",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of organized seed collection."
+          }
+        },
+        {
+          "id": "AGR-P06",
+          "action": "Teach sustainable farming techniques",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "event_verification",
+            "details": "Workshop documentation."
+          }
+        },
+        {
+          "id": "AGR-P07",
+          "action": "Report food wastage at events/restaurants",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo evidence."
+          }
+        },
+        {
+          "id": "AGR-P08",
+          "action": "Set up a community urban farm",
+          "points": 60,
+          "frequency": "one_time",
+          "verification": {
+            "method": "documentation",
+            "details": "Community space documentation."
+          }
+        },
+        {
+          "id": "AGR-P09",
+          "action": "Maintain a vermicompost system",
+          "points": 20,
+          "frequency": "per_month",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Monthly photo."
+          }
+        },
+        {
+          "id": "AGR-P10",
+          "action": "Grow indigenous/traditional crops",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "AI identifies heritage crop varieties."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "AGR-N01",
+          "action": "Excessive pesticide use near water bodies",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "environmental_authority",
+            "details": "Community or environmental report."
+          }
+        },
+        {
+          "id": "AGR-N02",
+          "action": "Large-scale food wastage at events",
+          "points": -40,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Photo evidence."
+          }
+        },
+        {
+          "id": "AGR-N03",
+          "action": "Hoarding food grains to manipulate prices",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "market_authority",
+            "details": "Market report evidence."
+          }
+        }
+      ]
+    },
+    {
+      "id": "DIG",
+      "name": "Digital Citizenship",
+      "description": "Online Safety, Misinformation, Cyberbullying, Digital Inclusion",
+      "positive": [
+        {
+          "id": "DIG-P01",
+          "action": "Report fake news / misinformation",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_fact_check",
+            "details": "AI fact-check verification."
+          }
+        },
+        {
+          "id": "DIG-P02",
+          "action": "Teach online safety to children/elderly",
+          "points": 25,
+          "frequency": "per_session",
+          "verification": {
+            "method": "event_verification",
+            "details": "Workshop documentation."
+          }
+        },
+        {
+          "id": "DIG-P03",
+          "action": "Help someone create Aadhaar/DigiLocker/UPI",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Assisted person attestation."
+          }
+        },
+        {
+          "id": "DIG-P04",
+          "action": "Create accessibility-friendly digital content",
+          "points": 20,
+          "frequency": "per_content",
+          "verification": {
+            "method": "ai_review",
+            "details": "AI verifies alt-text, captions."
+          }
+        },
+        {
+          "id": "DIG-P05",
+          "action": "Report cyberbullying with evidence",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "screenshot_evidence",
+            "details": "Screenshot evidence."
+          }
+        },
+        {
+          "id": "DIG-P06",
+          "action": "Volunteer for digital literacy program",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "certificate",
+            "details": "Organization verification."
+          }
+        },
+        {
+          "id": "DIG-P07",
+          "action": "Translate government services into local language",
+          "points": 25,
+          "frequency": "per_content",
+          "verification": {
+            "method": "verified_translation",
+            "details": "Verified translation."
+          }
+        },
+        {
+          "id": "DIG-P08",
+          "action": "Help elderly set up digital payment",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Assisted person attestation."
+          }
+        },
+        {
+          "id": "DIG-P09",
+          "action": "Create open-source tool for community use",
+          "points": 40,
+          "frequency": "per_project",
+          "verification": {
+            "method": "github_verification",
+            "details": "GitHub repository verification."
+          }
+        },
+        {
+          "id": "DIG-P10",
+          "action": "Report phishing/scam targeting community",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "evidence",
+            "details": "Evidence submitted."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "DIG-N01",
+          "action": "Spreading misinformation/deepfakes",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "AI detection + community report."
+          }
+        },
+        {
+          "id": "DIG-N02",
+          "action": "Cyberbullying / online harassment",
+          "points": -60,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Evidence-based report."
+          }
+        },
+        {
+          "id": "DIG-N03",
+          "action": "Phishing / digital scam operation",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "cyber_crime_cell",
+            "details": "Cyber crime cell notified."
+          }
+        },
+        {
+          "id": "DIG-N04",
+          "action": "Doxxing community members",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "police",
+            "details": "Immediate content removal. Police report."
+          }
+        },
+        {
+          "id": "DIG-N05",
+          "action": "Creating fake Chitragupt accounts for points",
+          "points": "all_points_revoked",
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "platform",
+            "details": "AI pattern detection. All accounts terminated."
+          }
+        }
+      ]
+    },
+    {
+      "id": "SAF",
+      "name": "Safety & Security",
+      "description": "Women Safety, Child Safety, Neighborhood Watch, Emergency",
+      "positive": [
+        {
+          "id": "SAF-P01",
+          "action": "Participate in neighborhood night patrol",
+          "points": 20,
+          "frequency": "per_session",
+          "verification": {
+            "method": "group_checkin",
+            "details": "Group check-in."
+          }
+        },
+        {
+          "id": "SAF-P02",
+          "action": "Install and share CCTV for community safety",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "technical_verification",
+            "details": "Installation verification."
+          }
+        },
+        {
+          "id": "SAF-P03",
+          "action": "Escort someone safely at night",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Recipient attestation."
+          }
+        },
+        {
+          "id": "SAF-P04",
+          "action": "Report broken streetlight creating dark spot",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "geotag_ai_photo",
+            "details": "Geotagged photo at night."
+          }
+        },
+        {
+          "id": "SAF-P05",
+          "action": "Conduct women's safety audit of neighborhood",
+          "points": 25,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "documentation",
+            "details": "Documented audit."
+          }
+        },
+        {
+          "id": "SAF-P06",
+          "action": "Report child labor / child begging racket",
+          "points": 40,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "evidence",
+            "details": "Childline 1098 notified.",
+            "authority": "childline_1098"
+          }
+        },
+        {
+          "id": "SAF-P07",
+          "action": "Install speed breaker/mirror at blind spots",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Municipal approval + photo."
+          }
+        },
+        {
+          "id": "SAF-P08",
+          "action": "Volunteer at women's helpline",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "certificate",
+            "details": "Organization verification."
+          }
+        },
+        {
+          "id": "SAF-P09",
+          "action": "Create safe walking routes map for women",
+          "points": 25,
+          "frequency": "per_route",
+          "verification": {
+            "method": "crowdsource_gps",
+            "details": "Crowd-sourced route mapping."
+          }
+        },
+        {
+          "id": "SAF-P10",
+          "action": "Report drug peddling in neighborhood",
+          "points": 30,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "anonymous_report",
+            "details": "Anonymous option. Narcotics bureau notified.",
+            "authority": "narcotics_bureau"
+          }
+        },
+        {
+          "id": "SAF-P11",
+          "action": "Organize anti-substance abuse awareness camp",
+          "points": 35,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation."
+          }
+        },
+        {
+          "id": "SAF-P12",
+          "action": "Set up community emergency alert system",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "documentation",
+            "details": "System documentation."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "SAF-N01",
+          "action": "Eve teasing / street harassment (verified)",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "police",
+            "details": "Police notified."
+          }
+        },
+        {
+          "id": "SAF-N02",
+          "action": "Negligent driving near school zones",
+          "points": -40,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Multiple community reports."
+          }
+        },
+        {
+          "id": "SAF-N03",
+          "action": "Selling intoxicants to minors",
+          "points": -150,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "police_excise_dept",
+            "details": "Police and excise department notified."
+          }
+        },
+        {
+          "id": "SAF-N04",
+          "action": "Filing false reports to harm someone",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "All related points revoked."
+          }
+        },
+        {
+          "id": "SAF-N05",
+          "action": "Stalking (verified)",
+          "points": -150,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "police",
+            "details": "Police complaint auto-filed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ECO",
+      "name": "Economic & Livelihood",
+      "description": "Local Economy, Employment, Skill Development, Entrepreneurship",
+      "positive": [
+        {
+          "id": "ECO-P01",
+          "action": "Hire/employ a person with disability",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Employment contract verification."
+          }
+        },
+        {
+          "id": "ECO-P02",
+          "action": "Mentor a young entrepreneur",
+          "points": 20,
+          "frequency": "per_session",
+          "verification": {
+            "method": "attestation",
+            "details": "Mentee attestation."
+          }
+        },
+        {
+          "id": "ECO-P03",
+          "action": "Buy from local small businesses",
+          "points": 5,
+          "frequency": "per_purchase",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt from local business.",
+            "cap": "Monthly cap enforced."
+          }
+        },
+        {
+          "id": "ECO-P04",
+          "action": "Teach a marketable skill to unemployed youth",
+          "points": 30,
+          "frequency": "per_session",
+          "verification": {
+            "method": "event_verification",
+            "details": "Workshop documentation."
+          }
+        },
+        {
+          "id": "ECO-P05",
+          "action": "Provide internship to underprivileged student",
+          "points": 40,
+          "frequency": "per_month",
+          "verification": {
+            "method": "certificate",
+            "details": "Internship agreement."
+          }
+        },
+        {
+          "id": "ECO-P06",
+          "action": "Set up self-help group (SHG)",
+          "points": 60,
+          "frequency": "one_time",
+          "verification": {
+            "method": "registration",
+            "details": "Registration documentation."
+          }
+        },
+        {
+          "id": "ECO-P07",
+          "action": "Help someone open bank account / file taxes",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "attestation",
+            "details": "Assisted person attestation."
+          }
+        },
+        {
+          "id": "ECO-P08",
+          "action": "Support women-led businesses",
+          "points": 10,
+          "frequency": "per_purchase",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt from women-led enterprise."
+          }
+        },
+        {
+          "id": "ECO-P09",
+          "action": "Create accessible workplace for disabled",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Accessibility audit photo."
+          }
+        },
+        {
+          "id": "ECO-P10",
+          "action": "Fair wage certification for domestic help",
+          "points": 20,
+          "frequency": "one_time",
+          "verification": {
+            "method": "attestation",
+            "details": "Self-declaration + worker attestation."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "ECO-N01",
+          "action": "Labor exploitation / wage theft",
+          "points": -100,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "labour_department",
+            "details": "Labor department notified."
+          }
+        },
+        {
+          "id": "ECO-N02",
+          "action": "Child labor employment",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "child_welfare_labour_dept",
+            "details": "Child welfare and labor department notified."
+          }
+        },
+        {
+          "id": "ECO-N03",
+          "action": "Discrimination in hiring",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Documented pattern with evidence."
+          }
+        },
+        {
+          "id": "ECO-N04",
+          "action": "Tax evasion (community reporting on business)",
+          "points": -60,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "tax_authority",
+            "details": "Pattern of cash-only no-bill transactions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "BLD",
+      "name": "Blood Donation & Organ Donation",
+      "description": "Blood Banks, Plasma, Organs, Eye Donation, Stem Cells, Body Donation",
+      "positive": [
+        {
+          "id": "BLD-P01",
+          "action": "Donate whole blood",
+          "points": 50,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "eRaktKosh / blood bank receipt scan.",
+            "cooldown": "3 months",
+            "api": "eRaktKosh"
+          }
+        },
+        {
+          "id": "BLD-P02",
+          "action": "Donate plasma",
+          "points": 40,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Hospital receipt verification.",
+            "cooldown": "2 weeks"
+          }
+        },
+        {
+          "id": "BLD-P03",
+          "action": "Donate platelets (apheresis)",
+          "points": 45,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Blood bank receipt.",
+            "cooldown": "2 weeks"
+          }
+        },
+        {
+          "id": "BLD-P04",
+          "action": "Emergency blood donation (responded within 4 hours)",
+          "points": 80,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "timestamp_receipt",
+            "details": "Timestamp of SOS alert vs donation receipt. Hero responder badge.",
+            "badge": "Hero Responder"
+          }
+        },
+        {
+          "id": "BLD-P05",
+          "action": "Organize a blood donation camp",
+          "points": 100,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation with blood bank partnership verification. Count of units collected."
+          }
+        },
+        {
+          "id": "BLD-P06",
+          "action": "Register as regular blood donor (quarterly commitment)",
+          "points": 20,
+          "frequency": "per_quarter",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Blood bank registration + quarterly donation proof."
+          }
+        },
+        {
+          "id": "BLD-P07",
+          "action": "Recruit 5+ new blood donors",
+          "points": 40,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "independent_verification",
+            "details": "Recruited donors verified independently. Recruiter bonus."
+          }
+        },
+        {
+          "id": "BLD-P08",
+          "action": "Donate rare blood group (AB-, B-, O-, A-)",
+          "points": 70,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Blood bank verification of rare group. Higher Karma for scarcity."
+          }
+        },
+        {
+          "id": "BLD-P09",
+          "action": "Register on organ donor registry (NOTTO)",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "NOTTO pledge certificate scan.",
+            "api": "NOTTO"
+          }
+        },
+        {
+          "id": "BLD-P10",
+          "action": "Living organ donation (kidney)",
+          "points": 300,
+          "frequency": "one_time",
+          "verification": {
+            "method": "hospital_verification",
+            "details": "Hospital + NOTTO verification. Lifetime health monitoring via app.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "BLD-P11",
+          "action": "Living organ donation (liver lobe)",
+          "points": 300,
+          "frequency": "one_time",
+          "verification": {
+            "method": "hospital_verification",
+            "details": "Hospital verification. Lifetime health check-ins.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "BLD-P12",
+          "action": "Posthumous organ donation (family executes)",
+          "points": 500,
+          "frequency": "one_time",
+          "type": "legacy",
+          "verification": {
+            "method": "hospital_notto_verification",
+            "details": "Hospital + NOTTO. Permanent Life Giver badge on family profile. Karma inherited.",
+            "badge": "Life Giver",
+            "karma_type": "legacy"
+          }
+        },
+        {
+          "id": "BLD-P13",
+          "action": "Cornea / eye donation pledge",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Eye bank registration verification."
+          }
+        },
+        {
+          "id": "BLD-P14",
+          "action": "Cornea donation (posthumous, family executes)",
+          "points": 200,
+          "frequency": "one_time",
+          "type": "legacy",
+          "verification": {
+            "method": "eye_bank_verification",
+            "details": "Eye bank verification.",
+            "badge": "Vision Giver",
+            "karma_type": "legacy"
+          }
+        },
+        {
+          "id": "BLD-P15",
+          "action": "Body donation pledge for medical research",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Medical college registration."
+          }
+        },
+        {
+          "id": "BLD-P16",
+          "action": "Body donation (family follows through)",
+          "points": 300,
+          "frequency": "one_time",
+          "type": "legacy",
+          "verification": {
+            "method": "medical_college_verification",
+            "details": "Medical college verification.",
+            "badge": "Science Legacy",
+            "karma_type": "legacy"
+          }
+        },
+        {
+          "id": "BLD-P17",
+          "action": "Stem cell registry enrollment (DKMS/MDRI)",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Registry confirmation.",
+            "api": "DKMS_MDRI"
+          }
+        },
+        {
+          "id": "BLD-P18",
+          "action": "Actual stem cell / bone marrow donation",
+          "points": 250,
+          "frequency": "one_time",
+          "verification": {
+            "method": "hospital_verification",
+            "details": "Hospital verification.",
+            "badge": "Life Saver"
+          }
+        },
+        {
+          "id": "BLD-P19",
+          "action": "Organize organ donation awareness campaign",
+          "points": 60,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation. NOTTO/SOTTO partnership verification.",
+            "api": "NOTTO_SOTTO"
+          }
+        },
+        {
+          "id": "BLD-P20",
+          "action": "Share blood donation experience story on platform",
+          "points": 10,
+          "frequency": "per_content",
+          "verification": {
+            "method": "content_moderation",
+            "details": "Content moderation check. Inspires others."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "BLD-N01",
+          "action": "Blood donation fraud (selling blood commercially)",
+          "points": -200,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "health_authorities",
+            "details": "Blood bank report. Health authorities notified."
+          }
+        },
+        {
+          "id": "BLD-N02",
+          "action": "Fake blood/organ donation claims",
+          "points": -150,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "AI verification failure. Fraud flag permanently on account."
+          }
+        },
+        {
+          "id": "BLD-N03",
+          "action": "Organ trafficking involvement",
+          "points": -500,
+          "frequency": "per_incident",
+          "additional_consequence": "permanent_ban",
+          "escalation": {
+            "level": 5,
+            "authority": "police_notto",
+            "details": "Criminal offense. Police + NOTTO notified. Permanent platform ban."
+          }
+        }
+      ]
+    },
+    {
+      "id": "NGO",
+      "name": "NGO & Charitable Giving",
+      "description": "Verified Donations, Volunteering, CSR, Philanthropy",
+      "positive": [
+        {
+          "id": "NGO-P01",
+          "action": "Donate to verified NGO (monetary)",
+          "points": "varies",
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt scan. Points scale: up to 1000=+15, 1001-5000=+30, 5000+=+50. Annual cap to prevent buying Karma.",
+            "points_scale": {
+              "up_to_1000": 15,
+              "1001_to_5000": 30,
+              "above_5000": 50
+            }
+          }
+        },
+        {
+          "id": "NGO-P02",
+          "action": "Volunteer at NGO (hands-on, not monetary)",
+          "points": 25,
+          "frequency": "per_session",
+          "verification": {
+            "method": "certificate",
+            "details": "NGO attendance verification. Minimum 2 hours per session.",
+            "minimum_hours": 2
+          }
+        },
+        {
+          "id": "NGO-P03",
+          "action": "Long-term NGO volunteering (6+ months regular)",
+          "points": 100,
+          "frequency": "one_time",
+          "type": "consistency_bonus",
+          "verification": {
+            "method": "certificate",
+            "details": "Consistency bonus at 6-month mark. NGO attestation."
+          }
+        },
+        {
+          "id": "NGO-P04",
+          "action": "Sponsor a meal via Akshaya Patra / similar",
+          "points": 15,
+          "frequency": "per_meal",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt showing number of meals sponsored.",
+            "api": "Akshaya_Patra"
+          }
+        },
+        {
+          "id": "NGO-P05",
+          "action": "Donate clothes/blankets via Goonj",
+          "points": 20,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Goonj collection receipt with item count.",
+            "api": "Goonj"
+          }
+        },
+        {
+          "id": "NGO-P06",
+          "action": "Sponsor child education via CRY/Pratham",
+          "points": 50,
+          "frequency": "per_month",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Monthly receipt verification.",
+            "api": "CRY_Pratham"
+          }
+        },
+        {
+          "id": "NGO-P07",
+          "action": "Contribute to HelpAge India elderly programs",
+          "points": 20,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt verification.",
+            "api": "HelpAge_India"
+          }
+        },
+        {
+          "id": "NGO-P08",
+          "action": "Animal rescue contribution via Wildlife SOS",
+          "points": 25,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt verification.",
+            "api": "Wildlife_SOS"
+          }
+        },
+        {
+          "id": "NGO-P09",
+          "action": "Contribute to disability NGO (NAB, Sense India, etc.)",
+          "points": 25,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Receipt verification."
+          }
+        },
+        {
+          "id": "NGO-P10",
+          "action": "Create/register a new NGO",
+          "points": 100,
+          "frequency": "one_time",
+          "verification": {
+            "method": "registration",
+            "details": "DARPAN (NGO portal) registration verification.",
+            "api": "DARPAN"
+          }
+        },
+        {
+          "id": "NGO-P11",
+          "action": "File NGO annual compliance (existing NGOs)",
+          "points": 30,
+          "frequency": "per_year",
+          "verification": {
+            "method": "certificate",
+            "details": "FCRA/80G/12A compliance certificate scan."
+          }
+        },
+        {
+          "id": "NGO-P12",
+          "action": "Organize corporate CSR event through Chitragupt",
+          "points": 60,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation with employee participation count."
+          }
+        },
+        {
+          "id": "NGO-P13",
+          "action": "Microdonation via UPI through Chitragupt app",
+          "points": 5,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "in_app",
+            "details": "In-app donation tracking. Low friction, high frequency.",
+            "api": "UPI_NPCI"
+          }
+        },
+        {
+          "id": "NGO-P14",
+          "action": "Fundraise for a community cause on platform",
+          "points": 40,
+          "frequency": "per_campaign",
+          "verification": {
+            "method": "in_app",
+            "details": "Campaign verification. Milestone bonuses at 25%, 50%, 100% of goal."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "NGO-N01",
+          "action": "Fake NGO/charity scam",
+          "points": -500,
+          "frequency": "per_incident",
+          "additional_consequence": "permanent_ban",
+          "escalation": {
+            "level": 5,
+            "authority": "cyber_crime_charity_commissioner",
+            "details": "Verification failure. Cyber crime cell + charity commissioner notified."
+          }
+        },
+        {
+          "id": "NGO-N02",
+          "action": "Misappropriating donated funds (verified)",
+          "points": -300,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 5,
+            "authority": "police_charity_commissioner",
+            "details": "Audit evidence. Police + charity commissioner notified."
+          }
+        },
+        {
+          "id": "NGO-N03",
+          "action": "Using NGO for money laundering",
+          "points": -500,
+          "frequency": "per_incident",
+          "additional_consequence": "permanent_ban",
+          "escalation": {
+            "level": 5,
+            "authority": "ed_police",
+            "details": "FCRA violation report. ED/police notified. Permanent platform ban."
+          }
+        }
+      ]
+    },
+    {
+      "id": "FST",
+      "name": "Festival Sustainability",
+      "description": "Diwali, Holi, Ganesh Chaturthi, Navratri, Eid, Christmas, All Festivals",
+      "positive": [
+        {
+          "id": "FST-P01",
+          "action": "Use eco-friendly Ganesh idol (clay/natural)",
+          "points": 30,
+          "frequency": "per_year",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification. AI detects PoP vs natural clay."
+          }
+        },
+        {
+          "id": "FST-P02",
+          "action": "Home Ganesh visarjan (not in river/lake)",
+          "points": 20,
+          "frequency": "per_year",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of home dissolution in bucket."
+          }
+        },
+        {
+          "id": "FST-P03",
+          "action": "Organic/natural Holi colors",
+          "points": 15,
+          "frequency": "per_year",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of organic colors package or homemade preparation."
+          }
+        },
+        {
+          "id": "FST-P04",
+          "action": "Zero-cracker Diwali pledge + follow-through",
+          "points": 30,
+          "frequency": "per_year",
+          "verification": {
+            "method": "self_declaration",
+            "details": "Self-declaration + community validation. Neighborhood bonus."
+          }
+        },
+        {
+          "id": "FST-P05",
+          "action": "Diyas over electric lights for Diwali",
+          "points": 10,
+          "frequency": "per_year",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of traditional oil lamps."
+          }
+        },
+        {
+          "id": "FST-P06",
+          "action": "Post-Navratri venue cleanup participation",
+          "points": 25,
+          "frequency": "per_year",
+          "verification": {
+            "method": "geotag_before_after",
+            "details": "Before/after photos of garba ground cleanup."
+          }
+        },
+        {
+          "id": "FST-P07",
+          "action": "Eco-friendly Christmas tree (potted/living)",
+          "points": 15,
+          "frequency": "per_year",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of living tree vs cut tree."
+          }
+        },
+        {
+          "id": "FST-P08",
+          "action": "Post-Eid community feast with zero food waste",
+          "points": 25,
+          "frequency": "per_year",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation with waste management proof."
+          }
+        },
+        {
+          "id": "FST-P09",
+          "action": "Donate festival clothes/sweets to underprivileged",
+          "points": 20,
+          "frequency": "per_donation",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Distribution photo or NGO receipt."
+          }
+        },
+        {
+          "id": "FST-P10",
+          "action": "Use fabric/paper decorations (not plastic/thermocol)",
+          "points": 10,
+          "frequency": "per_year",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of sustainable decorations."
+          }
+        },
+        {
+          "id": "FST-P11",
+          "action": "Festival waste segregation and recycling",
+          "points": 15,
+          "frequency": "per_event",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of post-festival sorted waste."
+          }
+        },
+        {
+          "id": "FST-P12",
+          "action": "Community rangoli using natural materials",
+          "points": 10,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of organic materials used."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "FST-N01",
+          "action": "PoP Ganesh idol in natural water body",
+          "points": -40,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report with photo evidence. Alternative offered."
+          }
+        },
+        {
+          "id": "FST-N02",
+          "action": "Firecrackers after 10 PM (Supreme Court order violation)",
+          "points": -30,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Timestamp + community report."
+          }
+        },
+        {
+          "id": "FST-N03",
+          "action": "Chemical Holi colors causing skin harm",
+          "points": -20,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Community report with medical evidence."
+          }
+        },
+        {
+          "id": "FST-N04",
+          "action": "Post-festival garbage left in public spaces",
+          "points": -25,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Geotagged evidence of abandoned festival waste."
+          }
+        },
+        {
+          "id": "FST-N05",
+          "action": "Loudspeaker violations during festivals",
+          "points": -20,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Decibel reading + geotag + timestamp."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ACC",
+      "name": "Accessibility Audit & Inclusion",
+      "description": "Rating Public Spaces, Disability Access, Universal Design",
+      "positive": [
+        {
+          "id": "ACC-P01",
+          "action": "Audit a public building for wheelchair access",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo documentation with specific findings."
+          }
+        },
+        {
+          "id": "ACC-P02",
+          "action": "Audit a temple/mosque/church for disability access",
+          "points": 20,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Religious place accessibility photo report."
+          }
+        },
+        {
+          "id": "ACC-P03",
+          "action": "Audit a restaurant/shop for accessibility",
+          "points": 15,
+          "frequency": "per_instance",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo + rating on accessibility parameters."
+          }
+        },
+        {
+          "id": "ACC-P04",
+          "action": "Install braille signage at shop/office",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification."
+          }
+        },
+        {
+          "id": "ACC-P05",
+          "action": "Install tactile paving / guiding tiles",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of installation at business/public space."
+          }
+        },
+        {
+          "id": "ACC-P06",
+          "action": "Add wheelchair ramp at personal business",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "geotag_before_after",
+            "details": "Before/after photos."
+          }
+        },
+        {
+          "id": "ACC-P07",
+          "action": "Install audio announcements at public space",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "technical_verification",
+            "details": "Audio system verification."
+          }
+        },
+        {
+          "id": "ACC-P08",
+          "action": "Make website/app accessible (WCAG 2.2 AA)",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "audit_report",
+            "details": "Automated + manual audit report.",
+            "standard": "WCAG 2.2 AA"
+          }
+        },
+        {
+          "id": "ACC-P09",
+          "action": "Provide sign language interpreter at event",
+          "points": 30,
+          "frequency": "per_event",
+          "verification": {
+            "method": "event_verification",
+            "details": "Event documentation with interpreter present."
+          }
+        },
+        {
+          "id": "ACC-P10",
+          "action": "Create accessible public toilet",
+          "points": 50,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification of accessible toilet with grab bars, space."
+          }
+        },
+        {
+          "id": "ACC-P11",
+          "action": "Rate public transport for accessibility",
+          "points": 10,
+          "frequency": "per_report",
+          "verification": {
+            "method": "documentation",
+            "details": "Detailed accessibility report of bus/metro/auto."
+          }
+        },
+        {
+          "id": "ACC-P12",
+          "action": "Help map accessible routes in city",
+          "points": 15,
+          "frequency": "per_route",
+          "verification": {
+            "method": "gps_annotation",
+            "details": "GPS-tracked route with accessibility annotations."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "ACC-N01",
+          "action": "Refusing service to disabled person",
+          "points": -80,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Multiple witness + victim report."
+          }
+        },
+        {
+          "id": "ACC-N02",
+          "action": "Blocking wheelchair ramp/accessible path",
+          "points": -30,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": null,
+            "details": "Geotagged photo evidence."
+          }
+        },
+        {
+          "id": "ACC-N03",
+          "action": "Removing accessibility features from business",
+          "points": -60,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": null,
+            "details": "Before/after evidence from community."
+          }
+        }
+      ]
+    },
+    {
+      "id": "FNR",
+      "name": "Funeral & End-of-Life Sustainability",
+      "description": "Eco-Friendly Last Rites, Death Registration, Legacy",
+      "positive": [
+        {
+          "id": "FNR-P01",
+          "action": "Use electric/CNG crematorium",
+          "points": 20,
+          "frequency": "one_time",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "Crematorium receipt verification. Lower emissions."
+          }
+        },
+        {
+          "id": "FNR-P02",
+          "action": "Tree burial / memorial tree planting",
+          "points": 40,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo of memorial tree planted. Ongoing growth tracking.",
+            "ongoing_tracking": true
+          }
+        },
+        {
+          "id": "FNR-P03",
+          "action": "Eco-friendly shroud (biodegradable, no synthetic)",
+          "points": 15,
+          "frequency": "one_time",
+          "verification": {
+            "method": "ai_photo",
+            "details": "Photo verification."
+          }
+        },
+        {
+          "id": "FNR-P04",
+          "action": "Register death digitally within 21 days",
+          "points": 10,
+          "frequency": "one_time",
+          "verification": {
+            "method": "certificate",
+            "details": "Digital death certificate scan. Civic compliance."
+          }
+        },
+        {
+          "id": "FNR-P05",
+          "action": "Donate deceased's usable items to NGO",
+          "points": 25,
+          "frequency": "one_time",
+          "verification": {
+            "method": "receipt_scan",
+            "details": "NGO receipt."
+          }
+        },
+        {
+          "id": "FNR-P06",
+          "action": "Set up a memorial community fund",
+          "points": 30,
+          "frequency": "one_time",
+          "verification": {
+            "method": "documentation",
+            "details": "Fund documentation with purpose statement."
+          }
+        }
+      ],
+      "negative": [
+        {
+          "id": "FNR-N01",
+          "action": "Open-air cremation in restricted urban areas",
+          "points": -30,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 3,
+            "authority": "municipality",
+            "details": "Municipal report."
+          }
+        },
+        {
+          "id": "FNR-N02",
+          "action": "Dumping cremation waste in water bodies",
+          "points": -60,
+          "frequency": "per_incident",
+          "escalation": {
+            "level": 4,
+            "authority": "pollution_board",
+            "details": "Community report with evidence."
+          }
+        }
+      ]
+    }
+  ]
+}

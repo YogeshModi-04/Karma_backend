@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from agents.session_manager import lifespan as agent_lifespan
 from core.config import settings
 from services.health.router import router as health_router
+from services.verification.router import router as verification_router
 from services.vision.router import router as vision_router
 
 
@@ -34,6 +35,7 @@ def create_app() -> FastAPI:
 
     app.include_router(health_router)
     app.include_router(vision_router)
+    app.include_router(verification_router)
 
     return app
 

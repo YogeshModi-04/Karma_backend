@@ -39,3 +39,4 @@ Thumbs.db
 
 # Ollama models (if stored locally)
 ollama_data/
+# data/
