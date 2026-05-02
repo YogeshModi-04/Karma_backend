@@ -1,3 +1,4 @@
+import base64
 import urllib.request
 from pathlib import Path
 
@@ -30,6 +31,41 @@ def load_image(source: str) -> tuple[bytes, str]:
     if source.startswith(("http://", "https://")):
         return _load_from_url(source)
     return _load_from_path(source)
+
+
+def load_image_base64(data: str, mime_type: str = "image/jpeg") -> tuple[bytes, str]:
+    """
+    Decode a base64-encoded image string.
+
+    Accepts both raw base64 and data URI format:
+        ``data:image/png;base64,<data>``
+
+    Args:
+        data:      Raw base64 string or data URI.
+        mime_type: Fallback MIME type when not encoded in the data URI.
+
+    Returns:
+        Tuple of (image_bytes, mime_type).
+
+    Raises:
+        ImageLoadError: If the base64 data is malformed.
+    """
+    try:
+        if data.startswith("data:"):
+            # Strip data URI header: data:<mime>;base64,<payload>
+            header, payload = data.split(",", 1)
+            mime_type = header.split(";")[0].removeprefix("data:")
+        else:
+            payload = data
+        image_bytes = base64.b64decode(payload, validate=True)
+    except Exception as exc:
+        raise ImageLoadError(f"Invalid base64 image data: {exc}") from exc
+    return image_bytes, mime_type
+
+
+def load_image_bytes(raw: bytes, mime_type: str = "image/jpeg") -> tuple[bytes, str]:
+    """Wrap already-loaded raw bytes (e.g. from multipart upload)."""
+    return raw, mime_type
 
 
 def _load_from_path(path: str) -> tuple[bytes, str]:
